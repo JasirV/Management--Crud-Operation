@@ -23,6 +23,7 @@ def employee_form(request,id=0):
         if form.is_valid():
             form.save()
         return redirect('/employee/list/')
+    
 def employee_delete(request,id):
     employee = Employe.objects.get(pk=id)
     employee.delete()
